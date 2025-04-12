@@ -32,8 +32,6 @@
 
   <build>
     <plugins>
-
-      <!-- Updated Compiler Plugin -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -44,7 +42,6 @@
         </configuration>
       </plugin>
 
-      <!-- Maven Enforcer Plugin to enforce Maven version -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
@@ -103,6 +100,17 @@
           </reportPlugins>
         </configuration>
       </plugin>
+
+      <!-- ✅ Added WAR Plugin Here -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.3.2</version>
+        <configuration>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+        </configuration>
+      </plugin>
+
     </plugins>
 
     <pluginManagement>
@@ -217,4 +225,3 @@
   </scm>
 
 </project>
-
